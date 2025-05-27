@@ -2,17 +2,13 @@
 /*delay da pagina*/  
 const video = document.getElementById('video_propaganda');
 const mostrarDiv = document.getElementById('esconder_aparecer');
+const btnMostrar=document.getElementById("mostrarEvent")
 
-    // Função que verifica o tempo do vídeo
-    video.addEventListener('timeupdate', function() {
-      const tempoAtual = video.currentTime;
 
-      if (tempoAtual >=900) {
-        mostrarDiv.style.display = 'block';
-      } else {
-        mostrarDiv.style.display = 'none';
-      }
-    });
+btnMostrar.addEventListener("click",()=>{
+    mostrarDiv.style.display="block"
+    document.getElementById("esconder_aparecer").scrollIntoView({ behavior: "smooth" });
+})
 
 /*cronometro*/
 var minutos = 50;
